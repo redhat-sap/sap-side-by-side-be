@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- RMG - Camel Servlet Definitions -->
+    <bean id="camelHttpTransportServlet" class="org.apache.camel.component.servlet.CamelHttpTransportServlet" />
+
+    <bean id="servlet" class="org.springframework.boot.web.servlet.ServletRegistrationBean">
+        <property name="name" value="CamelServlet" />
+        <property name="servlet" ref="camelHttpTransportServlet" />
+        <property name="urlMappings" value="/sap-fuse-workshop/*" />
+    </bean>
+
+</beans>
