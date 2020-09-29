@@ -58,7 +58,7 @@
 		<!-- *** Please enter the connection property values for your SAP Instance *** -->
 		<jco.client.ashost>${env.S4HANA_HOST}</jco.client.ashost>
 		<jco.client.sysnr>00</jco.client.sysnr>
-		<jco.client.client>100</jco.client.client>
+		<jco.client.client>000</jco.client.client>
 		<jco.client.gwhost>${env.S4HANA_HOST}</jco.client.gwhost>
 		<jco.client.gwserv>${env.S4HANA_PORTJCO}</jco.client.gwserv>
 		<!-- User in old host <jco.client.user>FUSE</jco.client.user> -->
