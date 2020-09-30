@@ -30,7 +30,7 @@ seLinuxContext:
 supplementalGroups:
   type: RunAsAny
 users:
-  - system:serviceaccount:side-by-side:default
+  - system:serviceaccount:sidebyside:default
 volumes:
 - configMap
 - downwardAPI

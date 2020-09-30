@@ -2,7 +2,6 @@ kind: Service
 apiVersion: v1
 metadata:
   name: sap-side-by-side-be
-  namespace: side-by-side
   labels:
     app: sap-side-by-side-be
 spec:
