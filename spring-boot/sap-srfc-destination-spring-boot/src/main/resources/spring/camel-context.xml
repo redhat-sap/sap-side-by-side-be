@@ -89,7 +89,7 @@
             <to id="_to3get" uri="bean:requestGet"/>
             <log id="_log4get" message="[REST] >>> OData Camel Netweaver Carriers ${body}"/>
             <setHeader headerName="CamelNetWeaverCommand">
-                <constant>CarriersSet</constant>
+                <constant>CarrierSet</constant>
             </setHeader>
             <toD id="_to4get" uri="sap-netweaver:http://{{s4hana.host}}:{{s4hana.port}}/sap/opu/odata/sap/ZFLIGHT_PROJECT_SRV/?username={{s4hana.user}}&amp;password={{s4hana.password}}"/>
             <to id="_to2" uri="log:mylogger?showAll=true"/>
@@ -100,7 +100,7 @@
             <to id="_to5get" uri="bean:requestGet"/>
             <log id="_log6get" message="[REST] >>> OData Camel Netweaver Flights ${body}"/>
             <setHeader headerName="CamelNetWeaverCommand">
-		    <constant>CarriersSet('AA')/Flights</constant>
+		    <constant>CarrierSet('AA')/Flights</constant>
             </setHeader>
             <toD id="_to6get" uri="sap-netweaver:http://{{s4hana.host}}:{{s4hana.port}}/sap/opu/odata/sap/ZFLIGHT_PROJECT_SRV/?username={{s4hana.user}}&amp;password={{s4hana.password}}"/>
 	    <to id="_to3" uri="log:mylogger?showAll=true"/>
@@ -110,7 +110,7 @@
         <route id="api-route-get-sap-carriers-odata-olingo2">
             <from id="direct-api-route-get-sap-carriers-odata-olingo2" uri="direct:api-route-get-sap-carriers-odata-olingo2"/>
             <log id="_log1getodataCarriersolingo2" message="[REST] >>> Get Data from SAP Carriers via OData Olingo2"/>
-            <toD id="_to2getodataCarriersolingo2" uri="olingo2://read/CarriersSet(&#39;${header.id}&#39;)"/>
+            <toD id="_to2getodataCarriersolingo2" uri="olingo2://read/CarrierSet(&#39;${header.id}&#39;)"/>
             <!-- Log the Exchange body with the result from the SAP component -->
             <log id="_log2getodataCarriersolingo2" message="[REST] >>> OData response from SAP using camel-olingo2 ${body}"/>
         </route>
@@ -119,7 +119,7 @@
         <route id="api-route-get-sap-flights-odata-olingo2">
             <from id="api-route-get-sap-flights-odata-olingo2" uri="direct:api-route-get-sap-flights-odata-olingo2"/>
             <log id="_log1getodataFlightsolingo2" message="[REST] >>> Get Data from SAP Flights via OData Olingo2"/>
-            <toD id="_to2getodataFlightsolingo2" uri="olingo2://read/CarriersSet(&#39;${header.id}&#39;)/Flights"/>
+            <toD id="_to2getodataFlightsolingo2" uri="olingo2://read/CarrierSet(&#39;${header.id}&#39;)/Flights"/>
             <!-- Log the Exchange body with the result from the SAP component -->
             <log id="_log2getodataFlightsolingo2" message="[REST] >>> OData response from SAP using camel-olingo2 ${body}"/>
         </route>
