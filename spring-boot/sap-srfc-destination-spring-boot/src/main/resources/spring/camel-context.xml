@@ -128,7 +128,7 @@
     <bean id="olingo2Configuration" class="org.apache.camel.component.olingo2.Olingo2Configuration">
         <property name="httpHeaders">
             <map>
-                <entry key="Authorization" value="Basic bWFrOlIzZGg0dDEyMyE="/>
+                <entry key="Authorization" value="Basic cmljYXJkbzpSM2RoNHQxMjMh"/>
             </map>
         </property>
 	<property name="serviceUri" value="http://${S4HANA_HOST}:${S4HANA_PORT}/sap/opu/odata/sap/ZFLIGHT_PROJECT_SRV/"/>    
