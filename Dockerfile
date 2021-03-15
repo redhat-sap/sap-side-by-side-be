@@ -1,5 +1,4 @@
-# FROM registry.redhat.io/fuse7/fuse-java-openshift
-FROM quay.io/makentenza/fuse-java-openshift
+FROM registry.access.redhat.com/fuse7/fuse-java-openshift
 
 USER root
 
